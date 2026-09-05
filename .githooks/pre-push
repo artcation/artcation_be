@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Java 정적 분석을 실행합니다..."
+
+./gradlew checkstyleMain checkstyleTest --quiet
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo ""
+  echo "Checkstyle 검사에 실패했습니다."
+  echo "리포트: build/reports/checkstyle/main.html"
+  exit $status
+fi

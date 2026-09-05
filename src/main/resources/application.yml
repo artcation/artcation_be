@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: artcation
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}

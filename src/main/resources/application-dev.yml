@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://db:3306/artcation_dev?serverTimezone=Asia/Seoul
+    username: developer
+    password: ${DB_PASSWORD}

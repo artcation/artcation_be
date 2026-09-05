@@ -1,0 +1,11 @@
+#!/bin/sh
+msg=$(head -1 "$1")
+
+if ! echo "$msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore|ci)(\(.+\))?: .+"; then
+  echo "커밋 메시지가 컨벤션에 맞지 않습니다."
+  echo ""
+  echo " 형식: type(scope): 제목"
+  echo " 예시: feat(auth): 로그인 API 추가"
+  echo " 타입: feat|fix|docs|style|refactor|test|chore|ci"
+  exit 1
+fi

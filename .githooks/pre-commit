@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Java 코드 스타일을 검사합니다..."
+
+./gradlew spotlessCheck --quiet
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo ""
+  echo "spotlessCheck 실패"
+  echo "자동 포맷: ./gradlew spotlessApply"
+  exit $status
+fi
