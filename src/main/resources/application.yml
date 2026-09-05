@@ -7,6 +7,14 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
 
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+
 logging:
   pattern:
     level: "%5p [%X{requestId:-}] %X{method:-} %X{uri:-}"
