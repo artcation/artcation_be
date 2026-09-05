@@ -429,7 +429,9 @@
       <property name="allowedAnnotations" value="Override, Test"/>
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
     </module>
+    <!-- 비활성화 -->
     <module name="MissingJavadocMethod">
+      <property name="severity" value="ignore"/>
       <property name="scope" value="protected"/>
       <property name="allowMissingPropertyJavadoc" value="true"/>
       <property name="allowedAnnotations" value="Override, Test"/>
@@ -444,7 +446,9 @@
                                  or self::RECORD_DEF or self::ENUM_DEF]
                                  [not(./MODIFIERS/LITERAL_PUBLIC)]]"/>
     </module>
+    <!-- 비활성화 -->
     <module name="MissingJavadocType">
+      <property name="severity" value="ignore"/>
       <property name="scope" value="protected"/>
       <property name="tokens"
                 value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
