@@ -3,3 +3,6 @@ spring:
     url: jdbc:mysql://db:3306/artcation_dev?serverTimezone=Asia/Seoul
     username: developer
     password: ${DB_PASSWORD}
+
+server:
+  forward-headers-strategy: framework
